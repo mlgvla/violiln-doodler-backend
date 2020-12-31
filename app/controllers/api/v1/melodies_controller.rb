@@ -7,4 +7,9 @@ class Api::V1::MelodiesController < ApplicationController
 
     def create
     end
+
+    def show
+        melody = Melody.find(params[:id])
+        render json: MelodySerializer.new(melody)
+    end
 end
