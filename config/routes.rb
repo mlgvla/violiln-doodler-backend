@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 #   end
     namespace :api do
         namespace :v1 do
-          resources :melodies, only: [:index, :create, :show]
+          resources :melodies, only: [:index, :create, :show, :destroy]
         end
     end
 

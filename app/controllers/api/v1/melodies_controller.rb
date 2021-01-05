@@ -19,6 +19,11 @@ class Api::V1::MelodiesController < ApplicationController
         render json: MelodySerializer.new(melody)
     end
 
+    def destroy
+        melody = Melody.find(params[:id])
+        melody.destroy
+    end
+
     private
 
     def melody_params
