@@ -6,5 +6,6 @@ class Api::V1::UsersController < ApplicationController
     end
 
     def create
+        # to be implemented
     end
 end
