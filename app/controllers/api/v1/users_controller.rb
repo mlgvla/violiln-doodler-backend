@@ -2,7 +2,8 @@ class Api::V1::UsersController < ApplicationController
 
     def index
         users = User.all
-        render json: UserSerializer.new(users)
+        sorted_users = users.sort_by {|user| user.name}
+        render json: UserSerializer.new(sorted_users)
     end
 
     def create
